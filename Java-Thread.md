@@ -249,6 +249,12 @@ public class MyThreadFive {
 线程如果被阻塞（即当线程调用了Object.wait(), th.join(), th.sleep()等），再调用interrupt方法，**没有占用CPU运行的线程是不可能给自己的中断状态置位的，这就会产生一个InterruptedException异常，使得线程得以退出阻塞状态**，这时中断状态为False，不会改变。
 
 # 线程同步与线程安全
+# 参考：
+https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+
+
+
+
 ## 线程同步
 **线程同步：在多线程下，多线程共享临界资源，通过合理安排各线程对共享资源的竞争（互斥）访问，保证数据完整性**。
 
