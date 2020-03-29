@@ -264,7 +264,8 @@ https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=di
 
 参考：https://blog.csdn.net/xlgen157387/article/details/78197583
 
-### 同步实现方式3：
+### volatile关键字
+参考：https://www.cnblogs.com/dolphin0520/p/3920373.html#!comments
 
 
 # 线程通信
