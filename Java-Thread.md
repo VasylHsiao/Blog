@@ -249,6 +249,8 @@ public class MyThreadFive {
 线程如果被阻塞（即当线程调用了Object.wait(), th.join(), th.sleep()等），再调用interrupt方法，**没有占用CPU运行的线程是不可能给自己的中断状态置位的，这就会产生一个InterruptedException异常，使得线程得以退出阻塞状态**，这时中断状态为False，不会改变。
 
 # 线程同步与线程安全
+参考：
+https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
 ## 线程同步
 **线程同步：在多线程下，多线程共享临界资源，通过合理安排各线程对共享资源的竞争（互斥）访问，保证数据完整性**。
@@ -256,20 +258,19 @@ public class MyThreadFive {
 线程安全：在多线程下，采用加锁机制，当一个线程访问数据时，进行保护，……
 线程不安全：不提供数据保护，产生脏数据……
 
-### 同步实现方式1：
-### 同步实现方式2：
+### 同步实现方式1：synchronized
+
+### 同步实现方式2：ReentrantLock
+
+参考：https://blog.csdn.net/xlgen157387/article/details/78197583
+
 ### 同步实现方式3：
-
-## 参考：
-https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
-
 
 
 # 线程通信
+参考：
+https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
 ## wait()/notify()/notifyall()
 ## await()/signal()/signalall()
-## 参考：
-## 参考：
-https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
