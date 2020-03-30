@@ -90,7 +90,6 @@ public class MyThreadThree implements Callable<Integer> {
         FutureTask<Integer> ft = new FutureTask<>(myThreadThree);
         FutureTask<Integer> ft1 = new FutureTask<>(myThreadThree);
         System.out.println(Thread.currentThread().getName() + "===== ");
- 
         new Thread(ft, "thread-1").start();
         new Thread(ft1, "thread-2").start();
         try {
@@ -102,7 +101,6 @@ public class MyThreadThree implements Callable<Integer> {
             e.printStackTrace();
         }
     }
- 
     <a href="/profile/992988" data-card-uid="992988" class="js-nc-card" target="_blank">@Override
     public Integer call() throws Exception {
         for (int i = 0; i < 10; i++) {
@@ -122,6 +120,7 @@ public class MyThreadThree implements Callable<Integer> {
 
 但是也有**缺点**：
 1.Thread子类获取线程时，用this.即可，而runnable接口则需要Thread.currentThread（）这个静态方法。
+
 ## 4.运用Executor框架来创建线程池
 
 ```java
@@ -203,6 +202,13 @@ public class MyThreadFive {
     }
 }
 ```
+
+线程池的介绍
+参考：https://blog.csdn.net/mm_bit/article/details/49339313
+
+
+
+
 ## 5.常用方法
  1.start()：启动线程并执行相应的run()方法
  2.run():子线程要执行的代码放入run()方法中
