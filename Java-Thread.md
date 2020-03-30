@@ -248,7 +248,7 @@ public class MyThreadFive {
 线程如果正在运行的过程中, 去调用此方法仅仅是将中断状态标志置为True，线程的运行状态和具体情况由线程自己应对处理，不会受到直接的影响；
 线程如果被阻塞（即当线程调用了Object.wait(), th.join(), th.sleep()等），再调用interrupt方法，**没有占用CPU运行的线程是不可能给自己的中断状态置位的，这就会使线程抛出一个InterruptedException异常，得以退出阻塞状态**，这时中断状态为False，不会改变。
 
-# 线程同步与线程安全
+# 线程同步（互斥与线程安全）
 参考：
 https://blog.csdn.net/qq_38872310/article/details/79922848?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
 
